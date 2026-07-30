@@ -27,7 +27,7 @@ jobs:
           STREAMLIT_URL_4: ${{ secrets.STREAMLIT_URL_4 }}
           STREAMLIT_URL_5: ${{ secrets.STREAMLIT_URL_5 }}
         run: |
-          for url in "$STREAMLIT_URL_1" "$STREAMLIT_URL_2" "$STREAMLIT_URL_3"; do
+          for url in "$STREAMLIT_URL_1" "$STREAMLIT_URL_2" "$STREAMLIT_URL_3" "$STREAMLIT_URL_4" "$STREAMLIT_URL_5"; do
             if [ -n "$url" ]; then
               echo "🚀 Waking: $url"
               STREAMLIT_URL="$url" python .github/scripts/wake_app.py || echo "⚠️ Failed for $url, continuing..."
